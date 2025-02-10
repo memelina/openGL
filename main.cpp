@@ -409,16 +409,13 @@ glm::mat4 computeLightSpaceTrMatrix() {
 }
 void updateRockPosition() {
 	if (rollRock) {
-		float currentTime = glfwGetTime();  // Obține timpul curent
-
-		// Calculăm timpul trecut de la începutul mișcării
+		float currentTime = glfwGetTime();  
 		float elapsedTime = currentTime - rollStartTime;
 
-		// Mișcarea rocii (translatarea pe axa Z)
+		
 		rockPositionZ += rollSpeed;
-
 		// Rotește roca pe axa Y (ca o roată)
-		rockAngle += 1.0f;  // Ajustează această valoare pentru viteză
+		rockAngle += 1.0f; 
 		if (rockAngle >= 360.0f) {
 			rockAngle -= 360.0f;
 		}
